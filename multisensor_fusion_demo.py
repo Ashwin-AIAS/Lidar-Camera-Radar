@@ -200,3 +200,4 @@ camera_nis_vals = NIS_camera[~np.isnan(NIS_camera)]
 inside_camera = np.sum((camera_nis_vals >= chi2.ppf(0.025,m_pos)) & (camera_nis_vals <= chi2.ppf(0.975,m_pos)))
 frac_camera = inside_camera / len(camera_nis_vals) if len(camera_nis_vals)>0 else np.nan
 print(f"Camera NIS inside 95%: {frac_camera*100:.1f}% ({inside_camera}/{len(camera_nis_vals)})")
+
